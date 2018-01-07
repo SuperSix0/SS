@@ -1,0 +1,147 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 65536 bytes for Failed to commit area from 0x0000000004450000 to 0x0000000004460000 of length 65536.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (c:/workspace/9-2-build-windows-amd64-cygwin-phase2/jdk9/6725/hotspot/src/os/windows/vm/os_windows.cpp:3357), pid=7488, tid=15480
+#
+# JRE version:  (9.0+181) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (9+181, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=GBK connect
+
+Host: AMD A8-7500 Radeon R7, 10 Compute Cores 4C+6G  , 4 cores, 5G,  Windows 7 , 64 bit Build 7601 (6.1.7601.23915)
+Time: Fri Jan 05 21:53:41 2018 ?D1¨²¡À¨º¡Á?¨º¡À?? elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000031a000):  JavaThread "Unknown thread" [_thread_in_vm, id=15480, stack(0x0000000002430000,0x0000000002530000)]
+
+Stack: [0x0000000002430000,0x0000000002530000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x587108]
+
+[error occurred during error reporting (printing native stack), id 0xe0000002]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000000000330000 GCTaskThread "GC Thread#0" [stack: 0x0000000002680000,0x0000000002780000] [id=22560]
+  0x0000000000331800 GCTaskThread "GC Thread#1" [stack: 0x00000000027d0000,0x00000000028d0000] [id=22080]
+  0x0000000000334800 GCTaskThread "GC Thread#2" [stack: 0x0000000002a30000,0x0000000002b30000] [id=22556]
+  0x0000000000337800 GCTaskThread "GC Thread#3" [stack: 0x0000000002b50000,0x0000000002c50000] [id=19452]
+  0x000000000039a000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000000002f90000,0x0000000003090000] [id=12536]
+  0x000000000039f800 ConcurrentGCThread "G1 Marker#0" [stack: 0x0000000005be0000,0x0000000005ce0000] [id=15092]
+  0x0000000000340800 ConcurrentGCThread "G1 Refine#0" [stack: 0x00000000035f0000,0x00000000036f0000] [id=13952]
+  0x000000000033e800 ConcurrentGCThread "G1 Refine#1" [stack: 0x00000000034f0000,0x00000000035f0000] [id=6556]
+  0x000000000033d000 ConcurrentGCThread "G1 Refine#2" [stack: 0x0000000003220000,0x0000000003320000] [id=8952]
+  0x0000000000339800 ConcurrentGCThread "G1 Refine#3" [stack: 0x0000000003090000,0x0000000003190000] [id=21720]
+  0x000000000034a000 ConcurrentGCThread "G1 Young RemSet Sampling" [stack: 0x0000000003360000,0x0000000003460000] [id=22588]
+
+=>0x000000000031a000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=15480, stack(0x0000000002430000,0x0000000002530000)]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000000000316d00] Heap_lock - owner thread: 0x000000000031a000
+
+Heap address: 0x00000000a0400000, size: 1532 MB, Compressed Oops mode: Non-zero based: 0x00000000a0400000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x000000013f510000 - 0x000000013f54e000 	G:\Program Files (x86)\Java\jre-9\bin\javaw.exe
+0x0000000077bd0000 - 0x0000000077d7a000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00000000779b0000 - 0x0000000077acf000 	C:\Windows\system32\kernel32.dll
+0x000007fefd980000 - 0x000007fefd9ea000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefde90000 - 0x000007fefdf6b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefed10000 - 0x000007fefedaf000 	C:\Windows\system32\msvcrt.dll
+0x000007feffec0000 - 0x000007feffedf000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feff370000 - 0x000007feff49d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077ad0000 - 0x0000000077bca000 	C:\Windows\system32\USER32.dll
+0x000007feffa00000 - 0x000007feffa67000 	C:\Windows\system32\GDI32.dll
+0x000007feff660000 - 0x000007feff66e000 	C:\Windows\system32\LPK.dll
+0x000007feff4f0000 - 0x000007feff5bb000 	C:\Windows\system32\USP10.dll
+0x000007fefbbf0000 - 0x000007fefbde4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\COMCTL32.dll
+0x000007fefdd10000 - 0x000007fefdd81000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefc220000 - 0x000007fefc22c000 	C:\Windows\system32\VERSION.dll
+0x000007fefdc80000 - 0x000007fefdcae000 	C:\Windows\system32\IMM32.DLL
+0x000007fefef90000 - 0x000007feff099000 	C:\Windows\system32\MSCTF.dll
+0x000007fedaa40000 - 0x000007fedab2f000 	G:\Program Files (x86)\Java\jre-9\bin\msvcr120.dll
+0x000007fed9970000 - 0x000007fed9a16000 	G:\Program Files (x86)\Java\jre-9\bin\msvcp120.dll
+0x0000000007190000 - 0x0000000007bba000 	G:\Program Files (x86)\Java\jre-9\bin\server\jvm.dll
+0x000007fef96b0000 - 0x000007fef96b9000 	C:\Windows\system32\WSOCK32.dll
+0x000007feff4a0000 - 0x000007feff4ed000 	C:\Windows\system32\WS2_32.dll
+0x000007fefed00000 - 0x000007fefed08000 	C:\Windows\system32\NSI.dll
+0x000007fefac70000 - 0x000007fefacab000 	C:\Windows\system32\WINMM.dll
+0x0000000077d90000 - 0x0000000077d97000 	C:\Windows\system32\PSAPI.DLL
+0x000007fefbbe0000 - 0x000007fefbbef000 	G:\Program Files (x86)\Java\jre-9\bin\verify.dll
+0x000007fedaea0000 - 0x000007fedaec7000 	G:\Program Files (x86)\Java\jre-9\bin\java.dll
+0x000007fedae80000 - 0x000007fedae96000 	G:\Program Files (x86)\Java\jre-9\bin\zip.dll
+0x000007fefbbc0000 - 0x000007fefbbca000 	G:\Program Files (x86)\Java\jre-9\bin\jimage.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=GBK 
+java_command: connect
+java_class_path (initial): C:\Users\Administrator\eclipse-workspace\SS\bin;C:\Users\Administrator\eclipse-workspace\SS\sqljdbc4.jar
+Launcher Type: SUN_STANDARD
+
+Logging:
+Log output configuration:
+#0: stdout all=warning uptime,level,tags
+#1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:/Program Files/Java/jre1.8.0_131/bin/server;C:/Program Files/Java/jre1.8.0_131/bin;C:/Program Files/Java/jre1.8.0_131/lib/amd64;C:\Program Files\Microsoft MPI\Bin\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;G:\Program Files (x86)\Java\jdk-9\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\GtkSharp\2.12\bin;G:\Program Files\MATLAB\R2017b\runtime\win64;G:\Program Files\MATLAB\R2017b\bin;C:\opencv\build\x64\vc14\bin;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin;C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Eclipse;
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 48 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.23915)
+
+CPU:total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 21 model 48 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1
+
+Memory: 4k page, physical 6269024k(558284k free), swap 25074236k(5112k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (9+181) for windows-amd64 JRE (9+181), built on Aug  2 2017 21:30:51 by "javare" with MS VC++ 12.0 (VS2013)
+
+END.
